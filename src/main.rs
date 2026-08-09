@@ -1,9 +1,13 @@
-use std::io;
+use crate::garden::vegetables::Asparagus;
+pub mod config;
+
+// `pub mod garden;` 行告诉编译器包含在 src/garden.rs 中找到的代码，即编程
+pub mod garden;
 fn main() {
-    println!("Please enter a number");
-    let mut guess = String::new();
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line");
-    println!("You guessed: {}", guess);
+    let plant = Asparagus {};
+    println!("{:?}", plant);
+    let config = config::Config {
+        host: String::from("Tom"),
+        port: 80,
+    };
 }
