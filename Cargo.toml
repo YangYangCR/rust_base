@@ -7,3 +7,6 @@ edition = "2024"
 trpl = "0.3.0"
 tokio = "1.53.1"
 clap = { version = "4", features = ["derive"] }
+smg-mesh = "=1.0.0"
+anyhow = "1.0"
+openai-protocol = "1.7.0"
